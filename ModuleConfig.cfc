@@ -33,6 +33,6 @@ component {
             }
         }
         server.x_version = appVersion;
-		event.setHTTPHeader( name = "x-server-version", value = prc.hostnameHeader.hostname );
+		event.setHTTPHeader( name = "x-server-version", value = appVersion );
 	}
 }
