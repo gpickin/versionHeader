@@ -1,8 +1,8 @@
 {
     "name":"versionHeader",
-    "version":"1.0.0",
+    "version":"1.0.2",
     "author":"Gavin Pickin",
-    "location":"gpickin/versionHeader#v1.0.9",
+    "location":"gpickin/versionHeader#v1.0.2",
     "homepage":"https://github.com/gpickin/versionHeader",
     "documentation":"https://github.com/gpickin/versionHeader",
     "repository":{
@@ -24,7 +24,7 @@
         "coldbox":"tests/resources/app/coldbox"
     },
     "scripts":{
-        "postVersion":"package set location='gpickin/versionHeader#v`package version`' && echo 'v`package version`' > .version && git add .version && git commit -m 'update version'",
+        "postVersion":"package set location='gpickin/versionHeader#v`package version`' && echo 'v`package version`' > .version && !git add .version && !git commit -m 'Bump'",
         "onRelease":"publish",
         "postPublish":"!git push && !git push --tags"
     },
