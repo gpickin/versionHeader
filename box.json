@@ -1,0 +1,40 @@
+{
+    "name":"versionHeader",
+    "version":"1.0.0",
+    "author":"Gavin Pickin",
+    "location":"gpickin/versionHeader#v1.0.9",
+    "homepage":"https://github.com/gpickin/versionHeader",
+    "documentation":"https://github.com/gpickin/versionHeader",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/gpickin/versionHeader"
+    },
+    "bugs":"https://github.com/gpickin/versionHeader/issues",
+    "slug":"versionHeader",
+    "shortDescription":"Add Version headers to your app in one module",
+    "description":"Add Version headers to your app in one module",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "coldbox":"^4.3.0+188",
+        "testbox":"^2.4.0+80"
+    },
+    "installPaths":{
+        "testbox":"testbox",
+        "coldbox":"tests/resources/app/coldbox"
+    },
+    "scripts":{
+        "postVersion":"package set location='gpickin/versionHeader#v`package version`' && echo 'v`package version`' > .version && git add .version && git commit -m 'update version'",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "testbox":{
+        "runner":"http://localhost:51647/tests/runner.cfm",
+        "verbose":false
+    }
+}
