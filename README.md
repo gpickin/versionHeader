@@ -35,6 +35,6 @@ You can also use CommandBox with package scripts. When you run the command `bump
 
 ```
 "scripts":{
-    "postVersion":"echo 'v`package version`' > .version && !git add .version && !git commit -m 'Bump'"
+    "postVersion":"echo 'v`package version`' > .version && !git add .version && !git commit -m \"Bump the Version\""
 }
 ```
