@@ -24,7 +24,7 @@
         "coldbox":"tests/resources/app/coldbox"
     },
     "scripts":{
-        "postVersion":"package set location='gpickin/versionHeader#v`package version`' && echo 'v`package version`' > .version && !git add .version && !git commit -m 'Bump'",
+        "postVersion":"package set location='gpickin/versionHeader#v`package version`' && echo 'v`package version`' > .version && !git add .version && !git commit -m \"Bump the Version\"",
         "onRelease":"publish",
         "postPublish":"!git push && !git push --tags"
     },
